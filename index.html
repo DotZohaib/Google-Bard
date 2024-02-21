@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your website description">
+    <meta name="keywords" content="your, keywords, here">
+    <meta name="author" content="Your Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://www.gstatic.com/lamda/images/favicon_v1_150160cddff7f294ce30.svg">
+</head>
+
+<body>
+    <div id="container">
+        <div id="nav">
+            <div id="nav-left">
+                <i id="bars" class="fa-solid fa-list"></i>
+
+                <div id="img">
+                    <img class="img" src="img/logo.svg" alt="">
+                </div>
+            </div>
+            <div id="nav-right">
+                <i class="fa-solid fa-timeline"></i>
+                <i class="fa-regular fa-circle-question"></i>
+                <i class="fa-solid fa-gears"></i>
+                <i class="fa-solid fa-sliders"></i>
+                <img class="img1" src="img/male0291.png"
+                    alt="">
+            </div>
+        </div>
+
+        <div id="banner">
+            <i class="fa-solid fa-circle-check"></i>
+            <p> See the latest updates to the <a href="#">Privacy Help Hub</a></p>
+
+        </div>
+    </div>
+    <div id="home-body">
+        <div id="home">
+            <div id="home-left">
+                <button type="button" onclick="openNewChat()"><i class="fa-solid fa-plus"></i>New Chat</button>
+                <i id="cross" class="fa-solid fa-times"></i>
+            </div>
+            <div id="home-medium">
+                <p id="logo">Recent</p>
+                <div id="boxes">
+                    <div class="box">
+                        <i class="fa-solid fa-message"></i>
+                        <p>HTML and JavaScript code</p>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                  
+                   
+                    
+                </div>
+            </div>
+
+        </div>
+        <div id="home-right">
+            <ul>
+                <li class="btn">
+                    <i id="location" class="fa-solid fa-location-crosshairs"></i>
+                    <p>Larkana, Pakistan</p>
+                </li>
+                <li><a href="#">Based on your places Update location </a></li>
+            </ul>
+        </div>
+        <div id="chat-container">
+            <div id="chat-window">
+                <div id="user"></div>
+                <div id="Bard"></div>
+            </div>
+
+
+            <div class="input-area">
+                <i id="btn2" class="fa fa-image"></i>
+                <input type="search" name="myInput" id="message-input" placeholder="Enter a prompt here">
+                <i id="btn3" class="fa fa-microphone"></i>
+                <i onclick="askQuestion()" id="btn4" class="fa-solid fa-paper-plane"></i><br>
+
+            </div>
+            <p id="check">Bard may display inaccurate info, including about people, so double-check its responses. <a
+                    href="#"> Your privacy & Bard</a></p>
+
+        </div>
+        <script>
+            function openNewChat() {
+                // Retrieve the message input value
+                var messageInput = document.getElementById("message-input").value;
+            
+                // Add the new chat box with the retrieved message input value
+                var boxesContainer = document.getElementById("boxes");
+                var newBox = document.createElement("div");
+                newBox.className = "box";
+                newBox.innerHTML = '<i class="fa-solid fa-message"></i><p>' + messageInput + '</p><i class="fa-solid fa-ellipsis-vertical"></i>';
+                boxesContainer.appendChild(newBox);
+            
+                // Clear the input field and chat window
+                document.getElementById("message-input").value = "";
+                document.getElementById("chat-window").innerHTML = "";
+            }
+            
+            function showBoxData(event) {
+                // Check if the clicked element is a box
+                if (event.target.className === "box") {
+                    // Retrieve and display the data inside the clicked box
+                    var boxData = event.target.querySelector("p").textContent;
+                    alert("Clicked Box Data: " + boxData);
+                }
+            }
+        </script>
+        <!-- <script>
+            function sendMessage() {
+                var inputData = document.getElementById('inputData').value;
+                
+                // Send the user message to the backend
+                fetch('/api/message', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: inputData }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Append the user message and system response to the chat interface
+                    appendMessage('You', inputData);
+                    appendMessage('Bard', data.reply);
+                });
+                
+                // Clear the input field
+                document.getElementById('inputData').value = '';
+            }
+    
+            function appendMessage(sender, message) {
+                var chatDiv = document.getElementById('chat');
+                var messageDiv = document.createElement('div');
+                messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+                chatDiv.appendChild(messageDiv);
+            }
+        </script> -->
+        <script src="database.js"></script>
+        <script src="node.js"></script>
+        <script src="script.js"></script>
+        <script src="mongo.js"></script>
+        <script src="server.js"></script>
+</body>
+
+</html>

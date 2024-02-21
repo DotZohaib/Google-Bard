@@ -1,0 +1,576 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#nav{
+    height: 60px;
+    /* background-color: aqua; */
+    background-color: rgb(240 244 249);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+body{
+    background-color:rgb(240 244 249);
+}
+
+#nav #nav-left{
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+}
+#nav #nav-left #img{
+    margin-top: 8px;
+}
+#nav #nav-left #bars{
+     width: 33px;
+     font-size: 22px;
+     margin-right: 20px;
+     cursor: pointer;
+}
+
+#nav #nav-left #bars{
+     width: 33px;
+     font-size: 22px;
+     margin-right: 20px;
+     cursor: pointer;
+}
+
+#nav #nav-right{
+    margin-left: 63vw;
+    gap: 27px;
+    display: flex;
+    font-size: 22px;
+    cursor: pointer;
+}
+#nav #nav-right img{
+    width: 50px;
+    height: 37px;
+    border-radius: 50%;
+    margin-top: -8px;
+}
+
+#banner {
+    background-color: blue;
+    height: 40px;
+    color: white;
+    padding: 8px 16px; /* Add padding for spacing */
+    display: flex; /* Arrange elements horizontally */
+    align-items: center; /* Align content vertically */
+    animation: slideInRight 1s ease-in-out; /* Add animation */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+
+  }
+
+#banner p {
+    color: white;
+  }
+#banner p a {
+    color: white;
+  }
+
+#banner i {
+    margin-right: 8px;
+  }
+
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+
+@media only screen and (max-width: 440px) {
+
+    
+    #nav{
+        height: 60px;
+        background-color: rgb(240 244 249);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 100vw;
+    }
+    
+    
+    #nav #nav-left{
+        margin: 0px 7px;
+        display: flex;
+        align-items: center;
+    }
+    #nav #nav-left #img{
+        margin-top: 8px;
+        width: 7vw;
+    }
+    #nav #nav-left #bars{
+         font-size: 15px;
+         margin-right: 3px;
+         cursor: pointer;
+    }
+    
+    
+    #nav #nav-right{
+        margin-left: 33vw;
+        gap: 17px;
+        display: flex;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    #nav #nav-right img{
+        width: 32px;
+        height: 25px;
+        border-radius: 50%;
+        margin-top: -6px;
+    }
+    
+    #banner {
+        background-color: blue;
+        height: 40px;
+        color: white;
+        padding: 8px 16px; /* Add padding for spacing */
+        display: flex; /* Arrange elements horizontally */
+        align-items: center; /* Align content vertically */
+        animation: slideInRight 1s ease-in-out; /* Add animation */
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        
+    
+      }
+    
+    #banner p {
+        color: white;
+      }
+    #banner p a {
+        color: white;
+      }
+    
+    #banner i {
+        margin-right: 8px;
+      }
+    
+      
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      
+}
+
+
+
+/* ================================================================================== */
+#home {
+    width: 25vw;
+    background-color: rgb(240, 244, 249);
+    height: 74.4vh;
+    overflow: hidden; /* Hide overflow content */
+    /* border: 3px solid red; */
+    overflow-y: auto;
+}
+
+
+
+
+#home-left{
+    /* width: 25vw;
+    background-color: gray;
+    height: 84vh; */
+}
+#home-left button{
+    margin: 12px 20px ;
+    padding: 10px 20px;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    background-color: #a7bee5;
+}
+#home-left button:hover{
+    background-color: #919fb5;
+}
+#home-left button i{
+    margin-right: 15px;
+}
+
+
+
+#home-right{
+    width: 25vw;
+    height: 10vh;
+    background-color:rgb(240 244 249);
+    align-items: center;
+    position: fixed;
+    /* border: 2px solid green; */
+}
+#home-right ul li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 22px;
+    margin-left: 11px;
+    /* margin-top: 10px; */
+    /* margin-top: 19px; */
+}
+#home-right ul .btn{
+    margin-top: 11px;
+}
+
+#home-right ul li a{
+    text-decoration: none;
+    margin-left: 35px;
+}
+
+#home-right ul li a:hover{
+    text-decoration: underline;
+}
+
+#home-medium #logo {
+    margin-left: 27px;
+    margin-bottom: 15px;
+}
+
+
+#boxes {
+    margin-left: 2vw;
+    overflow-y: auto; /* Enable vertical scrolling for overflowing content */
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 21vw;
+    height: 40px;
+    border-radius: 22px;
+    background-color: #d3e3fd;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 15px;
+    transition: background-color 0.3s ease; /* Add a smooth background color transition */
+}
+
+.box:hover {
+    background-color: #a3b4cf;
+}
+
+
+@media only screen and (max-width: 440px) {
+ #home-body{
+    margin-left: -100vw;
+    
+ }
+    #home {
+        width: 90vw;
+        background-color: rgb(240, 244, 249);
+        height: 72vh;
+        overflow: hidden; /* Hide overflow content */
+        /* border: 3px solid red; */
+        overflow-y: auto;
+
+    }
+    
+    #home-left{
+        /* width: 25vw;
+        background-color: gray;
+        height: 84vh; */
+    }
+    #home-left button{
+        margin: 12px 20px ;
+        padding: 10px 20px;
+        border-radius: 22px;
+        border: none;
+        cursor: pointer;
+        font-size: 17px;
+        background-color: #d3e3fd;
+    }
+    #home-left button:hover{
+        background-color: #d3e3fd;
+    }
+    #home-left button i{
+        margin-right: 15px;
+    }
+    
+    
+    
+    #home-right{
+        width: 80vw;
+        height: 10vh;
+        background-color:rgb(240 244 249);
+        align-items: center;
+        position: fixed;
+        /* overflow: hidden; */
+        /* border: 2px solid green; */
+    }
+    #home-right ul li{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 22px;
+        margin-left: 11px;
+        font-size: 10px;
+        margin-top: 10px;
+        /* margin-top: 19px; */
+        /* border-radius: 11px; */
+    }
+    #home-right ul .btn{
+        margin-top: 11px;
+    }
+    
+    #home-right ul li a{
+        text-decoration: none;
+        margin-left: 35px;
+    }
+    
+    #home-right ul li a:hover{
+        text-decoration: underline;
+    }
+    
+    #home-medium #logo {
+        margin-left: 27px;
+        margin-bottom: 15px;
+    }
+    
+    
+    #boxes {
+        margin-left: 2vw;
+        overflow-y: auto; /* Enable vertical scrolling for overflowing content */
+    }
+    
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 80vw;
+        height: 40px;
+        border-radius: 22px;
+        background-color: #d3e3fd;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 15px;
+        transition: background-color 0.3s ease; /* Add a smooth background color transition */
+    }
+    
+    .box:hover {
+        background-color: #a3b4cf;
+    }
+    
+    
+}
+
+#cross{
+    margin-left: 60px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* ================================================================== */
+
+#chat-window{
+    width: 68vw;
+    background: url('img/male0291.png') center center no-repeat;
+    background-size: cover;
+    margin-left: 28vw;
+    margin-top: -70vh;
+    height: 75vh;
+    border-radius: 22px;
+    overflow-y: scroll;
+    padding: 40px 40px;
+}
+
+
+.input-area {
+    display: flex;
+    align-items: center;
+    /* background-color: #e2eaf5; */
+    padding: 10px;
+    border-radius: 5px;
+    width: 68vw;
+    /* margin-bottom: 10px; */
+    margin-top: -5vw;
+    margin-left: 28vw;
+    
+}
+.input-area #btn2{
+    margin-left: 30px;
+    cursor: pointer;
+    font-size: 29px;
+    margin-right: 10px;
+    
+}
+.input-area #btn3{
+    margin-left: -36px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+    
+}
+.input-area #btn4{
+    margin-left: 30px;
+    cursor: pointer;
+    font-size: 23px;
+    margin-right: 10px;
+    
+}
+
+.input-area #message-input{
+    width: 57vw;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 60px;
+    font-size: 15px;
+    border-radius: 22px;
+    border: 1 solid gray;
+}
+
+#check{
+    margin-left: 38vw;
+    /* margin-top: 10px; */
+    font-size: 14px;
+}
+
+
+/* Style for user messages */
+.user-message {
+    background-color: rgba(0, 128, 0, 0.732);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-left: 40vw;
+    height: auto;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* Style for bot messages */
+.bot-message {
+    background-color: rgba(66, 64, 64, 0.637);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-right: 25vw;
+    height: auto;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 440px) {
+    #chat-window{
+        width: 100vw;
+        background: url('img/male0291.png') center center no-repeat;
+        background-size: cover;
+        margin-left: 100vw;
+        overflow-y: auto;
+    }
+
+    
+.input-area {
+    display: flex;
+    align-items: center;
+    /* background-color: #e2eaf5; */
+    padding: 10px;
+    border-radius: 5px;
+    width: 100vw;
+    /* margin-bottom: 50px; */
+    /* margin-top: -/10vw; */
+    margin-left: 100vw;
+    margin-top: -30vw;
+    
+}
+.input-area #btn2{
+    margin-left: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+    
+}
+.input-area #btn3{
+    margin-left: -36px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+    
+}
+.input-area #btn4{
+    margin-left: 30px;
+    cursor: pointer;
+    font-size: 23px;
+    margin-right: 10px;
+    
+}
+
+.input-area #message-input{
+    width: 60vw;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 60px;
+    font-size: 15px;
+    border-radius: 22px;
+    border: 1 solid gray;
+}
+
+#check{
+    margin-left: 100vw;
+    /* margin-top: 10px; */
+    font-size: 11px;
+    text-align: center;
+}
+
+
+
+/* Style for user messages */
+.user-message {
+    background-color: rgba(0, 128, 0, 0.732);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-left: 0vw;
+    height: auto;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+/* Style for bot messages */
+.bot-message {
+    background-color: rgba(66, 64, 64, 0.637);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-right: 0vw;
+    height: auto;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+}
+
+
+/* ====================================================== */
+
+
+
+
+
+
+
+
